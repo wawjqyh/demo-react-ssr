@@ -4,7 +4,8 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <div>hello world</div>
+        <h1>react ssr</h1>
+        <p>react 服务端渲染</p>
       </div>
     );
   }

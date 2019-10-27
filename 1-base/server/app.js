@@ -3,8 +3,7 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
-const koaStatic = require('koa-static');
-const router = require('./router');
+const router = require('./router.js');
 const app = new Koa();
 
 /**
@@ -35,11 +34,6 @@ app.use(json());
  * @desc 在console输出日志
  */
 app.use(logger());
-
-/**
- * @desc 配置静态资源目录
- */
-app.use(koaStatic(__dirname + '/public'));
 
 /**
  * @desc 配置路由
