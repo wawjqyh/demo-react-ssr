@@ -7,7 +7,9 @@
     "2": "node 2-react-component/server/www.js",
     "2-build": "webpack --inline --progress --config 2-react-component/build/webpack-server.js",
     "3": "node 3-isomorphism/server/www.js",
-    "3-build": "webpack --inline --progress --config 3-isomorphism/build/webpack-server.js && webpack --inline --progress --config 3-isomorphism/build/webpack-client.js"
+    "3-build": "webpack --inline --progress --config 3-isomorphism/build/webpack-server.js && webpack --inline --progress --config 3-isomorphism/build/webpack-client.js",
+    "4": "node 4-router/server/www.js",
+    "4-build": "webpack --inline --progress --config 4-router/build/webpack-server.js && webpack --inline --progress --config 4-router/build/webpack-client.js"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",
