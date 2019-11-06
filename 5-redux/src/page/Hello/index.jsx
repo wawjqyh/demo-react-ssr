@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUserInfo } from '../../service/user';
 
-class Index extends Component {
+class Hello extends Component {
   async componentDidMount() {
     const res = await getUserInfo();
     this.props.dispatch({
@@ -32,4 +32,4 @@ class Index extends Component {
 
 export default connect(state => ({
   user: state.user
-}))(Index);
+}))(Hello);
