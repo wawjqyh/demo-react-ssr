@@ -1,6 +1,6 @@
 const initialState = {
-  name: '',
-  desc: ''
+  name: 'redux',
+  desc: '这个是服务端使用 redux 的 demo'
 };
 
 const reducer = (state, action) => {
@@ -15,4 +15,4 @@ const reducer = (state, action) => {
   }
 };
 
-export { reducer as default, initialState as userInitialState}
+export { reducer as default, initialState as userInitialState };
