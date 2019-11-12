@@ -5,8 +5,9 @@ import render from './render';
 const router = _router();
 
 router.get('*', async (ctx, next) => {
-  const content = await render(ctx.request.url);
+  const { content, state } = await render(ctx.request.url);
 
+  // 服务端获取数据后，将当前的 state 注入到 window 全局环境中
   ctx.body = `
     <html>
       <head>
@@ -14,6 +15,7 @@ router.get('*', async (ctx, next) => {
       </head>
       <body>
         <div id="root">${content}</div>
+        <script>window.context = ${JSON.stringify(state)}</script>
         <script src="/client.js"></script>
       </body>
     </html>

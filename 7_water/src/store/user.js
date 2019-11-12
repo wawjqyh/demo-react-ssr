@@ -1,6 +1,6 @@
 const initialState = {
-  name: 'redux',
-  desc: '这个是服务端使用 redux 的 demo'
+  name: '',
+  desc: ''
 };
 
 const reducer = (state, action) => {

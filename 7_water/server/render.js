@@ -33,5 +33,5 @@ export default async function(url) {
     </Provider>
   );
 
-  return content;
+  return { content, state: store.getState() };
 }
